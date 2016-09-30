@@ -20,7 +20,27 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
-        private void Awake(){
+		bool canMoveLeft;
+		bool canMoveRight;
+		void OnTriggerStay2D(Collider2D other) {
+			if(other.gameObject.layer==10) {
+				canMoveLeft = false;
+			}else if(other.gameObject.layer==11){
+				canMoveRight = false;
+			}
+		}
+
+		void OnCollisionStay2D(Collision2D other) {
+			if(other.gameObject.layer==10) {
+				canMoveLeft = false;
+			}
+			else if(other.gameObject.layer==11) {
+				canMoveRight = false;
+			}
+		}
+
+
+		private void Awake(){
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
@@ -62,10 +82,19 @@ namespace UnityStandardAssets._2D
             m_Anim.SetBool("Crouch", crouch);
 
             //only control the player if grounded or airControl is turned on
-            if (m_Grounded || m_AirControl)
-            {
-                // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move*m_CrouchSpeed : move);
+            if (m_Grounded || m_AirControl){
+				if(move>0) {
+					if(!canMoveRight) {
+						move = 0;
+					}
+				}else {
+					if(!canMoveLeft) {
+						move = 0;
+					}
+				}
+
+				// Reduce the speed if crouching by the crouchSpeed multiplier
+				move = (crouch ? move*m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
@@ -93,8 +122,10 @@ namespace UnityStandardAssets._2D
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-            }
-        }
+			}
+			canMoveLeft = true;
+			canMoveRight = true;
+		}
 
 
         private void Flip()
