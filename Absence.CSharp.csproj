@@ -69,9 +69,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BasicController.cs" />
-    <Compile Include="Assets\ProceduralController.cs" />
-    <Compile Include="Assets\ProceduralObject.cs" />
+    <Compile Include="Assets\Procedural\BasicController.cs" />
+    <Compile Include="Assets\Procedural\ProceduralController.cs" />
+    <Compile Include="Assets\Procedural\ProceduralObject.cs" />
+    <Compile Include="Assets\TestLevelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

@@ -13,6 +13,10 @@ namespace Abscence {
 			wasVisible = false;
 		}
 
+		public void Update() {
+			transform.position += Vector3.right*Time.deltaTime*ProceduralController.screenVelocity;
+		}
+
 		private void OnBecameInvisible() {
 			if(wasVisible) {
 				ProceduralController.RegisterObject(this,objectID);
