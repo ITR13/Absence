@@ -19,7 +19,7 @@ namespace Abscence {
 
 		void FixedUpdate() {
 			float move = Input.GetAxis("Horizontal");
-			bool crouch = Input.GetKey(KeyCode.LeftShift);
+			bool crouch = !Input.GetKey(KeyCode.LeftShift);
 			bool jump = Input.GetKey(KeyCode.Space);
 			controller.Move(move,crouch, jump);
 		}

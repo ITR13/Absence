@@ -19,8 +19,6 @@ namespace Abscence {
 				freeObjects[i] = new Stack<GameObject>();
 				if(prefabs[i]==null) {
 					Debug.LogWarning("Prefab at spot "+i+" does not exist");
-				}else if(prefabs[i].GetComponent<GameObject>()==null) {
-					Debug.LogWarning("Prefab \""+prefabs[i].name+"\" at index "+i+" does not have ProceduralObject");
 				}
 			}
 		}
