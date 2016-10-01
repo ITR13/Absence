@@ -9,6 +9,7 @@ namespace Abscence {
 		PlatformerCharacter2D controller;
 		[SerializeField]
 		Animator animator;
+		private float jumpTimer;
 
 		void OnCollisionEnter2D(Collision2D other) {
 			if(other.gameObject.layer==9) {
@@ -24,8 +25,12 @@ namespace Abscence {
 		void FixedUpdate() {
 			float move = Input.GetAxis("Horizontal");
 			bool crouch = Input.GetKey(KeyCode.LeftShift);
-			bool jump = Input.GetKeyDown(KeyCode.Space);
-			controller.Move(move,ProceduralController.screenVelocity,crouch, jump);
+			jumpTimer -= Time.deltaTime;
+			if(Input.GetKeyDown(KeyCode.Space)) {
+				jumpTimer = 0.2f;
+			}
+
+			controller.Move(move,ProceduralController.screenVelocity,crouch, jumpTimer>=0);
 		}
 	}
 }
