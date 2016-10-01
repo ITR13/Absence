@@ -21,6 +21,10 @@ public class SonarController : MonoBehaviour
 
 		//transform.position += new Vector3 (hor, ver, 0f);
 		Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
+		float ratio = (float)Screen.width / (float)Screen.height;
+		Debug.Log (Screen.width + " " + Screen.height);
+		screenPos.x *= ratio;
+
 #if UNITY_EDITOR_WIN
 		//screenPos.y = 1-screenPos.y;
 #endif
@@ -35,4 +39,5 @@ public class SonarController : MonoBehaviour
 		Shader.SetGlobalFloat ("_Threshold", sonarWidth);
 		Shader.SetGlobalFloat ("_Radius", sonarRadius);
 	}
+
 }
