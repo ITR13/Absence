@@ -27,11 +27,9 @@ public class SonarController : MonoBehaviour
 #if UNITY_EDITOR_WIN
 		//screenPos.y = 1-screenPos.y;
 #endif
-
-		Shader.SetGlobalVector("_PlayerPos", screenPos);
-
 		if (Input.GetKeyDown (KeyCode.E)) 
 		{
+			Shader.SetGlobalVector("_PlayerPos", screenPos);
 			DOTween.To(value => sonarRadius = value, 0.025f, 1.5f, 5f).SetEase(Ease.OutCubic);
 		}
 
