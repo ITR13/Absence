@@ -29,7 +29,7 @@ public class SonarController : MonoBehaviour
 		sonarTimer -= Time.deltaTime;
 		if (Input.GetKey(KeyCode.E)&&sonarTimer<=0) {
 			DOTween.To(value => sonarRadius = value, 0.025f, 1.5f, 5f).SetEase(Ease.OutCubic);
-			sonarTimer = 2.5f;
+			sonarTimer = 1.2f;
 		}
 
 		Shader.SetGlobalFloat ("_Threshold", sonarWidth);
