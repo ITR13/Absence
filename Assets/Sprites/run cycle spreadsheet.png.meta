@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 59cb54cff1fc87b4a9e6076758f94bbe
+timeCreated: 1475314922
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: run cycle spreadsheet_0
+    21300002: run cycle spreadsheet_1
+    21300004: run cycle spreadsheet_2
+    21300006: run cycle spreadsheet_3
+    21300008: run cycle spreadsheet_5
+    21300010: run cycle spreadsheet_6
+    21300012: run cycle spreadsheet_7
+    21300014: run cycle spreadsheet_8
+    21300016: run cycle spreadsheet_9
+    21300018: run cycle spreadsheet_10
+    21300020: run cycle spreadsheet_12
+    21300022: run cycle spreadsheet_13
+    21300024: run cycle spreadsheet_14
+    21300026: run cycle spreadsheet_15
+    21300028: run cycle spreadsheet_16
+    21300030: run cycle spreadsheet_17
+    21300032: run cycle spreadsheet_18
+    21300034: run cycle spreadsheet_19
+    21300036: run cycle spreadsheet_20
+    21300038: run cycle spreadsheet_21
+    21300040: run cycle spreadsheet_22
+    21300042: run cycle spreadsheet_23
+    21300044: run cycle spreadsheet_24
+    21300046: run cycle spreadsheet_25
+    21300048: run cycle spreadsheet_26
+    21300050: run cycle spreadsheet_27
+    21300052: run cycle spreadsheet_28
+    21300054: run cycle spreadsheet_29
+    21300056: run cycle spreadsheet_30
+    21300058: run cycle spreadsheet_31
+    21300060: run cycle spreadsheet_32
+    21300062: run cycle spreadsheet_33
+    21300064: run cycle spreadsheet_34
+    21300066: run cycle spreadsheet_35
+    21300068: run cycle spreadsheet_36
+    21300070: run cycle spreadsheet_37
+    21300072: run cycle spreadsheet_38
+    21300074: run cycle spreadsheet_39
+    21300076: run cycle spreadsheet_40
+    21300078: run cycle spreadsheet_41
+    21300080: run cycle spreadsheet_42
+    21300082: run cycle spreadsheet_43
+    21300084: run cycle spreadsheet_44
+    21300086: run cycle spreadsheet_45
+    21300088: run cycle spreadsheet_46
+    21300090: run cycle spreadsheet_4
+    21300092: run cycle spreadsheet_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 3422, z: 2886, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: run cycle spreadsheet_0
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 3448
+        width: 329
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3485
+        width: 360
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_2
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 3444
+        width: 328
+        height: 543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2718
+        width: 329
+        height: 547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_4
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 2725
+        width: 238
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_5
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 2725
+        width: 238
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_6
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2003
+        width: 356
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_7
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 2001
+        width: 337
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_8
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 2001
+        width: 335
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_9
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 1999
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_10
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1301
+        width: 340
+        height: 544
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_11
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1280
+        width: 320
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: run cycle spreadsheet_12
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 579
+        width: 340
+        height: 544
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
