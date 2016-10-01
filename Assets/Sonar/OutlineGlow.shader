@@ -1,0 +1,79 @@
+// Shader created with Shader Forge v1.28 
+// Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
+// Note: Manually altering this data may prevent you from opening it in Shader Forge
+/*SF_DATA;ver:1.28;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:0,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:0,dpts:2,wrdp:False,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:True,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:True,fnfb:True;n:type:ShaderForge.SFN_Final,id:4795,x:33057,y:32748,varname:node_4795,prsc:2|emission-4268-OUT;n:type:ShaderForge.SFN_ScreenPos,id:8306,x:32046,y:32785,varname:node_8306,prsc:2,sctp:2;n:type:ShaderForge.SFN_Tex2d,id:6116,x:32431,y:32721,ptovrint:False,ptlb:OutlineTex,ptin:_OutlineTex,varname:_node_6116,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:f15e4995cc92c4ac698b9bcb226b2b78,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Vector4Property,id:5525,x:32046,y:32957,ptovrint:False,ptlb:PlayerPos,ptin:_PlayerPos,varname:node_5525,prsc:2,glob:True,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5,v2:0.5,v3:0.5,v4:1;n:type:ShaderForge.SFN_Distance,id:743,x:32236,y:32924,varname:node_743,prsc:2|A-8306-UVOUT,B-5525-XYZ;n:type:ShaderForge.SFN_OneMinus,id:7364,x:32611,y:32721,varname:node_7364,prsc:2|IN-6116-RGB;n:type:ShaderForge.SFN_ValueProperty,id:5055,x:31911,y:33194,ptovrint:False,ptlb:Radius,ptin:_Radius,varname:node_5055,prsc:2,glob:True,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_InverseLerp,id:1756,x:32429,y:33345,varname:node_1756,prsc:2|A-8702-OUT,B-6206-OUT,V-743-OUT;n:type:ShaderForge.SFN_Add,id:6206,x:32160,y:33325,varname:node_6206,prsc:2|A-5055-OUT,B-2405-OUT;n:type:ShaderForge.SFN_Subtract,id:1959,x:32160,y:33113,varname:node_1959,prsc:2|A-5055-OUT,B-2405-OUT;n:type:ShaderForge.SFN_Vector1,id:8702,x:32160,y:33265,varname:node_8702,prsc:2,v1:0;n:type:ShaderForge.SFN_InverseLerp,id:3803,x:32429,y:33179,varname:node_3803,prsc:2|A-8702-OUT,B-1959-OUT,V-743-OUT;n:type:ShaderForge.SFN_Multiply,id:4268,x:32833,y:32721,varname:node_4268,prsc:2|A-7364-OUT,B-4548-OUT;n:type:ShaderForge.SFN_Floor,id:3190,x:32600,y:33179,varname:node_3190,prsc:2|IN-3803-OUT;n:type:ShaderForge.SFN_Floor,id:4033,x:32620,y:33345,varname:node_4033,prsc:2|IN-1756-OUT;n:type:ShaderForge.SFN_Add,id:9985,x:32958,y:33219,varname:node_9985,prsc:2|A-3634-OUT,B-4285-OUT;n:type:ShaderForge.SFN_Fmod,id:5993,x:32783,y:32997,varname:node_5993,prsc:2|A-9985-OUT,B-1022-OUT;n:type:ShaderForge.SFN_Vector1,id:1022,x:32554,y:33071,varname:node_1022,prsc:2,v1:2;n:type:ShaderForge.SFN_ValueProperty,id:2405,x:31911,y:33282,ptovrint:False,ptlb:Threshold,ptin:_Threshold,varname:node_2405,prsc:2,glob:True,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_Round,id:4548,x:32814,y:32859,varname:node_4548,prsc:2|IN-5993-OUT;n:type:ShaderForge.SFN_Clamp01,id:4285,x:32783,y:33345,varname:node_4285,prsc:2|IN-4033-OUT;n:type:ShaderForge.SFN_Clamp01,id:3634,x:32783,y:33206,varname:node_3634,prsc:2|IN-3190-OUT;proporder:6116;pass:END;sub:END;*/
+
+Shader "Shader Forge/OutlineGlow" {
+    Properties {
+        _OutlineTex ("OutlineTex", 2D) = "white" {}
+    }
+    SubShader {
+        Tags {
+            "IgnoreProjector"="True"
+            "Queue"="Transparent"
+            "RenderType"="Transparent"
+        }
+        Pass {
+            Name "FORWARD"
+            Tags {
+                "LightMode"="ForwardBase"
+            }
+            Blend One One
+            ZWrite Off
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #define UNITY_PASS_FORWARDBASE
+            #include "UnityCG.cginc"
+            #pragma multi_compile_fwdbase
+            #pragma multi_compile_fog
+            #pragma exclude_renderers gles3 metal d3d11_9x xbox360 xboxone ps3 ps4 psp2 
+            #pragma target 3.0
+            uniform sampler2D _OutlineTex; uniform float4 _OutlineTex_ST;
+            uniform float4 _PlayerPos;
+            uniform float _Radius;
+            uniform float _Threshold;
+            struct VertexInput {
+                float4 vertex : POSITION;
+                float2 texcoord0 : TEXCOORD0;
+            };
+            struct VertexOutput {
+                float4 pos : SV_POSITION;
+                float2 uv0 : TEXCOORD0;
+                float4 screenPos : TEXCOORD1;
+                UNITY_FOG_COORDS(2)
+            };
+            VertexOutput vert (VertexInput v) {
+                VertexOutput o = (VertexOutput)0;
+                o.uv0 = v.texcoord0;
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                UNITY_TRANSFER_FOG(o,o.pos);
+                o.screenPos = o.pos;
+                return o;
+            }
+            float4 frag(VertexOutput i) : COLOR {
+                #if UNITY_UV_STARTS_AT_TOP
+                    float grabSign = -_ProjectionParams.x;
+                #else
+                    float grabSign = _ProjectionParams.x;
+                #endif
+                i.screenPos = float4( i.screenPos.xy / i.screenPos.w, 0, 0 );
+                i.screenPos.y *= _ProjectionParams.x;
+                float2 sceneUVs = float2(1,grabSign)*i.screenPos.xy*0.5+0.5;
+////// Lighting:
+////// Emissive:
+                float4 _OutlineTex_var = tex2D(_OutlineTex,TRANSFORM_TEX(i.uv0, _OutlineTex));
+                float node_8702 = 0.0;
+                float node_743 = distance(sceneUVs.rg,_PlayerPos.rgb);
+                float3 emissive = ((1.0 - _OutlineTex_var.rgb)*round(fmod((saturate(floor(((node_743-node_8702)/((_Radius-_Threshold)-node_8702))))+saturate(floor(((node_743-node_8702)/((_Radius+_Threshold)-node_8702))))),2.0)));
+                float3 finalColor = emissive;
+                fixed4 finalRGBA = fixed4(finalColor,1);
+                UNITY_APPLY_FOG_COLOR(i.fogCoord, finalRGBA, fixed4(0.5,0.5,0.5,1));
+                return finalRGBA;
+            }
+            ENDCG
+        }
+    }
+    CustomEditor "ShaderForgeMaterialInspector"
+}
