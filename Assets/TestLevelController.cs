@@ -35,6 +35,11 @@ namespace Abscence {
 					new Vector3(Random.Range(width,width*3),
 					Random.Range(-height,height)),Quaternion.identity); 
 			}
+			for(int i = 0; i<5; i++) {
+				proceduralController.Spawn(1,
+					new Vector3(Random.Range(width,width*3),
+					Random.Range(-height,height)),Quaternion.identity);
+			}
 		}
 	}
 }

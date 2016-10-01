@@ -25,7 +25,7 @@ namespace Abscence {
 			float move = Input.GetAxis("Horizontal");
 			bool crouch = Input.GetKey(KeyCode.LeftShift);
 			bool jump = Input.GetKeyDown(KeyCode.Space);
-			controller.Move(move,crouch, jump);
+			controller.Move(move,ProceduralController.screenVelocity,crouch, jump);
 		}
 	}
 }
