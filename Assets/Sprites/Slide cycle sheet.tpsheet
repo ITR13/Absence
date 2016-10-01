@@ -1,0 +1,14 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:636a5d05776365b8fa8b4fb71dd582eb:02d0ef98b6c2d3792a1b128542b54622:566d647524e41a4675b57f9a6963563f$
+#
+:format=40000
+:texture=Slide cycle sheet last frame.png
+:size=2048x1024
+:pivotpoints=enabled
+
+slide cycle00008;1;303;1280;720;0.5;0.5; 4;1280;0;0;0;0;720;1280;720; 2;1;2;3;0;1;3

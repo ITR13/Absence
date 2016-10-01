@@ -21,9 +21,9 @@ public class SonarController : MonoBehaviour
 
 		//transform.position += new Vector3 (hor, ver, 0f);
 		Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
-		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) {
-			screenPos.y = 1-screenPos.y;
-		}
+#if UNITY_EDITOR_WIN
+		//screenPos.y = 1-screenPos.y;
+#endif
 
 		Shader.SetGlobalVector("_PlayerPos", screenPos);
 

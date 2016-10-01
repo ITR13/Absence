@@ -81,12 +81,15 @@ namespace UnityStandardAssets._2D
 				if(move>0) {
 					if(!canMoveRight) {
 						move = 0;
+						m_Rigidbody2D.velocity = new Vector3(0,m_Rigidbody2D.velocity.y);
 					}
 				}else {
 					if(!canMoveLeft) {
 						generallyMovingLeft = true;
 						move = 0;
-					}else {
+						m_Rigidbody2D.velocity = new Vector3(0,m_Rigidbody2D.velocity.y);
+					}
+					else {
 						move *= 1.25f;
 					}
 				}
