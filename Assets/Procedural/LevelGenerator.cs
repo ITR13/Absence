@@ -20,7 +20,7 @@ namespace Abscence {
 			height = 13.8f*2;
 			width = 20;
 
-			timeBetweenEachLevel = 2.5f*4f;
+			timeBetweenEachLevel = 2.5f*5f;
 			timer = timeBetweenEachLevel;
 			currentLevel = 1;
 			closedPaths = 0;
@@ -37,15 +37,15 @@ namespace Abscence {
 		private void GenerateLevel() {
 			int r = Random.Range(0,9);
 			if(r==0||r==1) {
-				Spawn4x4(0,currentLevel/20);
-				Spawn4x4(2,currentLevel/20);
+				Spawn4x4(0,currentLevel/15);
+				Spawn4x4(2,currentLevel/15);
 			}else if(r==2||r==3) {
-				Spawn4x4(1,currentLevel/20);
-				Spawn4x4(0,currentLevel/20);
+				Spawn4x4(1,currentLevel/15);
+				Spawn4x4(0,currentLevel/15);
 			}
 			else if(r==4||r==5) {
-				Spawn4x4(1,currentLevel/20);
-				Spawn4x4(2,currentLevel/20);
+				Spawn4x4(1,currentLevel/15);
+				Spawn4x4(2,currentLevel/15);
 				Spawn(Random.Range(0,3),-1,0,0);
 			}
 			else if(r==6||r==7) {
@@ -53,10 +53,10 @@ namespace Abscence {
 				Spawn(Random.Range(0,3),-1,0,0);
 			}
 			else {
-				Spawn4x4(1,currentLevel/20);
-				Spawn4x4(2,currentLevel/20);
-				Spawn4x4(3,currentLevel/20);
-				Spawn(Random.Range(0,3),-1,0,0);
+				Spawn4x4(1,currentLevel/15);
+				Spawn4x4(2,currentLevel/15);
+				Spawn4x4(3,currentLevel/15);
+				//Spawn(Random.Range(0,3),-1,0,0);
 			}
 
 
@@ -68,38 +68,38 @@ namespace Abscence {
 
 
 		private void Spawn4x4(int y, int danger) {
-			int r = Random.Range(0,3);
+			int r = Random.Range(0,4);
 			if(r==0) {
 				if(danger==0) {
-					Spawn(0,0+y,y*3,0);
-					Spawn(0,1+y,y*3,0);
-					Spawn(0,2+y,y*3,0);
-					Spawn(0,3+y,y*3,0);
+					Spawn(0,0+y,y*4,0);
+					Spawn(0,1+y,y*4,0);
+					Spawn(0,2+y,y*4,0);
+					Spawn(0,3+y,y*4,0);
 				} else {
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,0+y,y*3,0);
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,1+y,y*3,0);
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,2+y,y*3,0);
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,3+y,y*3,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,0+y,y*4,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,1+y,y*4,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,2+y,y*4,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,3+y,y*4,0);
 				}
 			}if(r==1) {
-				Spawn(0,0+y,y*3,0);
-				Spawn(0,1+y,y*3,0);
-				Spawn(0,2+y,y*3,0);
-				Spawn(0,3+y,y*3,0);
+				Spawn(0,0+y,y*4,0);
+				Spawn(0,1+y,y*4,0);
+				Spawn(0,2+y,y*4,0);
+				Spawn(0,3+y,y*4,0);
 				if(danger==0) {
-					Spawn(0,1+y,y*3+2,0);
-					Spawn(0,2+y,y*3+2,0);
-					Spawn(0,3+y,y*3+2,0);
+					Spawn(0,1+y,y*4+2,0);
+					Spawn(0,2+y,y*4+2,0);
+					Spawn(0,3+y,y*4+2,0);
 				}else {
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,1+y,y*3+2,0);
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,2+y,y*3+2,0);
-					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,3+y,y*3+2,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,1+y,y*4+2,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,2+y,y*4+2,0);
+					Spawn(Random.Range(0,5-danger)==0 ? 1 : 0,3+y,y*4+2,0);
 				}
 			}if(r==2) {
-				Spawn(0,0+y,y*3+2,0);
-				Spawn(2,1+y,y*3+2,0);
-				Spawn(3,2+y,y*3+2,0);
-				Spawn(4,3+y,y*3+2,0);
+				Spawn(0,0+y,y*4,0);
+				Spawn(2,1+y,y*4,0);
+				Spawn(3,2+y,y*4,0);
+				Spawn(4,3+y,y*4,0);
 				if(danger==1) {
 					int dangerous = Random.Range(0,danger);
 					for(int i = 0; i<danger; i++) {
@@ -108,7 +108,10 @@ namespace Abscence {
 					}
 				}
 			}if(r==3) {
-
+				Spawn(5,0+y,y*4+1,0);
+				Spawn(5,1+y,y*4+1,0);
+				Spawn(5,2+y,y*4+1,0);
+				Spawn(5,3+y,y*4+1,0);
 			}
 		}
 
