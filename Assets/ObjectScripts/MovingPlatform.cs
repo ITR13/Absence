@@ -8,17 +8,19 @@ namespace Abscence {
 		private float timer;
 		[SerializeField]
 		private float direction;
+		private float _direction;
 
 		private void OnEnable() {
+			_direction = direction;
 			timer = 0;
 		}
 
 		public void Update() {
-			transform.position += Vector3.right*direction*Time.deltaTime;
+			transform.position += Vector3.right*_direction*Time.deltaTime;
 			timer += Time.deltaTime;
 			if(timer>timerSwitch) {
 				timer = timerSwitch-timer;
-				direction = -direction;
+				_direction = -_direction;
 			}
 		}
 	}

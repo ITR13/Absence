@@ -22,7 +22,7 @@ namespace Abscence {
 
 			timeBetweenEachLevel = width*1.5f;
 			timer = timeBetweenEachLevel;
-			currentLevel = 4;
+			currentLevel = 0;
 		}
 
 		public void Update() {
