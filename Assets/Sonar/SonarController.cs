@@ -35,4 +35,9 @@ public class SonarController : MonoBehaviour
 		Shader.SetGlobalFloat ("_Threshold", sonarWidth);
 		Shader.SetGlobalFloat ("_Radius", sonarRadius);
 	}
+
+
+	
+
+
 }
