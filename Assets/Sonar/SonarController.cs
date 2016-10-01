@@ -21,13 +21,15 @@ public class SonarController : MonoBehaviour
 
 		//transform.position += new Vector3 (hor, ver, 0f);
 		Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
-		screenPos.y = 1-screenPos.y;
+		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) {
+			screenPos.y = 1-screenPos.y;
+		}
 
 		Shader.SetGlobalVector("_PlayerPos", screenPos);
 
 		if (Input.GetKeyDown (KeyCode.E)) 
 		{
-			DOTween.To(value => sonarRadius = value, 0.025f, 1.5f, 3f).SetEase(Ease.InOutCubic);
+			DOTween.To(value => sonarRadius = value, 0.025f, 1.5f, 5f).SetEase(Ease.OutCubic);
 		}
 
 		Shader.SetGlobalFloat ("_Threshold", sonarWidth);
